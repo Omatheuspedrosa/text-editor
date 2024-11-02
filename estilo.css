@@ -45,7 +45,8 @@ img.linha-vertical {
 }
 
 .tamanho-da-fonte button:hover {
-    background-color: rgb(190, 186, 186);
+    background-color: rgba(199, 199, 199, 0.959);
+    border-radius: 4px;
 
 }
 
@@ -54,6 +55,28 @@ img.linha-vertical {
     text-align: center;
     width: 4rem;
     height: 100%;
+}
+
+.estilo-de-texto{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+}
+
+.estilo-de-texto button {
+    width: 2.5rem;
+    height: 60%;
+    margin-inline-end: 0.5rem;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.estilo-de-texto button:hover {
+    background-color: rgba(199, 199, 199, 0.959);
+    border-radius: 4px;
 }
 
 .folha {
