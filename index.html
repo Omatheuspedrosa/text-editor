@@ -15,13 +15,10 @@
     <section class="barra-de-ferramentas">
 
         <div class="fonte">
-            <select name="" id="" class="form-select">
-                <option value="">Fonte 1</option>
-                <option value="">Fonte 2</option>
-                <option value="">Fonte 3</option>
-                <option value="">Fonte 4</option>
-                <option value="">Fonte 5</option>
-                <option value="">Fonte 6</option>
+            <select name="fontes" id="fontes" class="form-select">
+                <option value="Arial, Helvetica, sans-serif">Arial</option>
+                <option value="'Courier New', Courier, monospace">Courier New</option>
+                <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Franklin</option>
             </select>
         </div>
 
@@ -49,12 +46,18 @@
 
         <img src="imgs/Vertical-Line.png" alt="" class="linha-vertical">
 
-        <div class="alinhamento"></div>
+        <div class="alinhamento">
+
+            <button type="button" title="alinhar a esquerda"><i class="fa-solid fa-align-left"></i></button>
+            <button type="button" title="alinhar ao centro"><i class="fa-solid fa-align-center"></i></button>
+            <button type="button" title="alinhar a direita"><i class="fa-solid fa-align-right"></i></button>
+
+        </div>
 
     </section>
 
     <section class="folha">
-        <textarea name="" id=""></textarea>
+        <textarea name="" id="area-do-texto"></textarea>
     </section>
     
     <script src="script.js"></script>
