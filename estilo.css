@@ -75,6 +75,11 @@ img.linha-vertical {
     font-weight: 500;
 }
 
+.estilo-de-texto .ativo {
+    background-color: rgba(199, 199, 199, 0.959);
+    border-radius: 4px;
+}
+
 .estilo-de-texto button:hover {
     background-color: rgba(199, 199, 199, 0.959);
     border-radius: 4px;

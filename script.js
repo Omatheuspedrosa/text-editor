@@ -30,12 +30,15 @@ document.querySelector(".btn-mais").addEventListener('click', () => {
 
 document.querySelector(".btn-negrito").addEventListener('click', () => {
     texto.classList.toggle("negrito");
+    document.querySelector(".btn-negrito").classList.toggle("ativo")
 });
 
 document.querySelector(".btn-italico").addEventListener('click', () => {
     texto.classList.toggle("italico");
+    document.querySelector(".btn-italico").classList.toggle("ativo")
 });
 
 document.querySelector(".btn-sublinhado").addEventListener('click', () => {
     texto.classList.toggle("sublinhado");
+    document.querySelector(".btn-sublinhado").classList.toggle("ativo")
 });
