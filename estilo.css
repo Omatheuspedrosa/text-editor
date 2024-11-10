@@ -84,6 +84,13 @@ img.linha-vertical {
     font-weight: bold;
 }
 
+.italico {
+    font-style: italic;
+}
+
+.sublinhado {
+    text-decoration: underline;
+}
 
 .alinhamento button {
     width: 2.5rem;

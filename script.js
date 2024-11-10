@@ -31,3 +31,11 @@ document.querySelector(".btn-mais").addEventListener('click', () => {
 document.querySelector(".btn-negrito").addEventListener('click', () => {
     texto.classList.toggle("negrito");
 });
+
+document.querySelector(".btn-italico").addEventListener('click', () => {
+    texto.classList.toggle("italico");
+});
+
+document.querySelector(".btn-sublinhado").addEventListener('click', () => {
+    texto.classList.toggle("sublinhado");
+});
