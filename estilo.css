@@ -80,6 +80,11 @@ img.linha-vertical {
     border-radius: 4px;
 }
 
+.negrito {
+    font-weight: bold;
+}
+
+
 .alinhamento button {
     width: 2.5rem;
     border: none;

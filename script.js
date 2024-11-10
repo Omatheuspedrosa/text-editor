@@ -27,3 +27,7 @@ document.querySelector(".btn-mais").addEventListener('click', () => {
     tamanhoDaFonte.value = novoTamanho;
     texto.style.fontSize = novoTamanho + "px";
 });
+
+document.querySelector(".btn-negrito").addEventListener('click', () => {
+    texto.classList.toggle("negrito");
+});
