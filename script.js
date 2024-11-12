@@ -42,3 +42,7 @@ document.querySelector(".btn-sublinhado").addEventListener('click', () => {
     texto.classList.toggle("sublinhado");
     document.querySelector(".btn-sublinhado").classList.toggle("ativo")
 });
+
+document.querySelector(".btn-mudarCor").addEventListener('change', ()=>{
+    texto.style.color = document.querySelector(".btn-mudarCor").value;
+})
