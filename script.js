@@ -1,6 +1,7 @@
 let fonte = document.querySelector("#fontes");
 let texto = document.querySelector('#area-do-texto');
 let tamanhoDaFonte = document.querySelector(".tamanho-da-fonte .form-control")
+let corDoTexto = document.querySelector('#escolherCor');
 
 function limitarTamanhoFonte(valor) {
     return Math.max(1, Math.min(valor, 100));
@@ -43,6 +44,10 @@ document.querySelector(".btn-sublinhado").addEventListener('click', () => {
     document.querySelector(".btn-sublinhado").classList.toggle("ativo")
 });
 
-document.querySelector(".btn-mudarCor").addEventListener('change', ()=>{
-    texto.style.color = document.querySelector(".btn-mudarCor").value;
+document.querySelector(".btn-mudarCor").addEventListener('click', ()=>{
+    corDoTexto.click();
+})
+
+corDoTexto.addEventListener('change', ()=>{
+    texto.style.color = corDoTexto.value;
 })
