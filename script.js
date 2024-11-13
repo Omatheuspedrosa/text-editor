@@ -29,20 +29,11 @@ document.querySelector(".btn-mais").addEventListener('click', () => {
     texto.style.fontSize = novoTamanho + "px";
 });
 
-document.querySelector(".btn-negrito").addEventListener('click', () => {
-    texto.classList.toggle("negrito");
-    document.querySelector(".btn-negrito").classList.toggle("ativo")
-});
+transformarTexto(".btn-negrito", "negrito");
 
-document.querySelector(".btn-italico").addEventListener('click', () => {
-    texto.classList.toggle("italico");
-    document.querySelector(".btn-italico").classList.toggle("ativo")
-});
+transformarTexto(".btn-italico", "italico");
 
-document.querySelector(".btn-sublinhado").addEventListener('click', () => {
-    texto.classList.toggle("sublinhado");
-    document.querySelector(".btn-sublinhado").classList.toggle("ativo")
-});
+transformarTexto(".btn-sublinhado", "sublinhado");
 
 document.querySelector(".btn-mudarCor").addEventListener('click', ()=>{
     corDoTexto.click();
@@ -51,3 +42,10 @@ document.querySelector(".btn-mudarCor").addEventListener('click', ()=>{
 corDoTexto.addEventListener('change', ()=>{
     texto.style.color = corDoTexto.value;
 })
+
+function transformarTexto(elemento, classe){
+    document.querySelector(elemento).addEventListener('click', () => {
+        texto.classList.toggle(classe);
+        document.querySelector(elemento).classList.toggle("ativo")
+    });
+}
