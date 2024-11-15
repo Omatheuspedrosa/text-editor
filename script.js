@@ -1,3 +1,5 @@
+import { transformarTexto, alinhamento } from "./modulos.js";
+
 let fonte = document.querySelector("#fontes");
 let texto = document.querySelector('#area-do-texto');
 let tamanhoDaFonte = document.querySelector(".tamanho-da-fonte .form-control")
@@ -30,11 +32,11 @@ document.querySelector(".btn-mais").addEventListener('click', () => {
     texto.style.fontSize = novoTamanho + "px";
 });
 
-transformarTexto(".btn-negrito", "negrito");
+transformarTexto(texto, ".btn-negrito", "negrito");
 
-transformarTexto(".btn-italico", "italico");
+transformarTexto(texto, ".btn-italico", "italico");
 
-transformarTexto(".btn-sublinhado", "sublinhado");
+transformarTexto(texto, ".btn-sublinhado", "sublinhado");
 
 document.querySelector(".btn-mudarCor").addEventListener('click', () => {
     corDoTexto.click();
@@ -44,27 +46,14 @@ corDoTexto.addEventListener('change', () => {
     texto.style.color = corDoTexto.value;
 })
 
-alinhamento("#alinhar-esquerda", "left");
+alinhamento(texto, "#alinhar-esquerda", "left");
 
-alinhamento("#alinhar-centro", "center");
+alinhamento(texto, "#alinhar-centro", "center");
 
-alinhamento("#alinhar-direita", "right");
+alinhamento(texto, "#alinhar-direita", "right");
 
 document.querySelector('.btn-imprimir').addEventListener('click', () => {
     barraDeFerramentas.style.display = "none";
     window.print()
     barraDeFerramentas.style.display = "flex";
 })
-
-function alinhamento(elemento, posicao) {
-    document.querySelector(elemento).addEventListener('click', () => {
-        texto.style.textAlign = posicao;
-    })
-}
-
-function transformarTexto(elemento, classe) {
-    document.querySelector(elemento).addEventListener('click', () => {
-        texto.classList.toggle(classe);
-        document.querySelector(elemento).classList.toggle("ativo")
-    });
-}
