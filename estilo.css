@@ -66,7 +66,7 @@ img.linha-vertical {
     height: 100%;
 }
 
-.estilo-de-texto button {
+.estilo-de-texto button, button.btn-imprimir {
     width: 2.5rem;
     height: 60%;
     margin-inline-end: 0.5rem;
@@ -116,7 +116,7 @@ button.btn-mudarCor {
     background-color: transparent;
 }
 
-.alinhamento button:hover {
+.alinhamento button:hover, button.btn-imprimir:hover {
     background-color: rgba(199, 199, 199, 0.959);
     border-radius: 4px;
 }

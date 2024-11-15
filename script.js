@@ -2,6 +2,7 @@ let fonte = document.querySelector("#fontes");
 let texto = document.querySelector('#area-do-texto');
 let tamanhoDaFonte = document.querySelector(".tamanho-da-fonte .form-control")
 let corDoTexto = document.querySelector('#escolherCor');
+const barraDeFerramentas = document.querySelector('.barra-de-ferramentas');
 
 function limitarTamanhoFonte(valor) {
     return Math.max(1, Math.min(valor, 100));
@@ -49,6 +50,11 @@ alinhamento("#alinhar-centro", "center");
 
 alinhamento("#alinhar-direita", "right");
 
+document.querySelector('.btn-imprimir').addEventListener('click', () => {
+    barraDeFerramentas.style.display = "none";
+    window.print()
+    barraDeFerramentas.style.display = "flex";
+})
 
 function alinhamento(elemento, posicao) {
     document.querySelector(elemento).addEventListener('click', () => {
