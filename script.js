@@ -35,15 +35,28 @@ transformarTexto(".btn-italico", "italico");
 
 transformarTexto(".btn-sublinhado", "sublinhado");
 
-document.querySelector(".btn-mudarCor").addEventListener('click', ()=>{
+document.querySelector(".btn-mudarCor").addEventListener('click', () => {
     corDoTexto.click();
 })
 
-corDoTexto.addEventListener('change', ()=>{
+corDoTexto.addEventListener('change', () => {
     texto.style.color = corDoTexto.value;
 })
 
-function transformarTexto(elemento, classe){
+alinhamento("#alinhar-esquerda", "left");
+
+alinhamento("#alinhar-centro", "center");
+
+alinhamento("#alinhar-direita", "right");
+
+
+function alinhamento(elemento, posicao) {
+    document.querySelector(elemento).addEventListener('click', () => {
+        texto.style.textAlign = posicao;
+    })
+}
+
+function transformarTexto(elemento, classe) {
     document.querySelector(elemento).addEventListener('click', () => {
         texto.classList.toggle(classe);
         document.querySelector(elemento).classList.toggle("ativo")
