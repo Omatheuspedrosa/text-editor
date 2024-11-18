@@ -1,14 +1,10 @@
-import { transformarTexto, alinhamento } from "./modulos.js";
+import { transformarTexto, alinhamento, limitarTamanhoFonte } from "./modulos.js";
 
 let fonte = document.querySelector("#fontes");
 let texto = document.querySelector('#area-do-texto');
 let tamanhoDaFonte = document.querySelector(".tamanho-da-fonte .form-control")
 let corDoTexto = document.querySelector('#escolherCor');
 const barraDeFerramentas = document.querySelector('.barra-de-ferramentas');
-
-function limitarTamanhoFonte(valor) {
-    return Math.max(1, Math.min(valor, 100));
-}
 
 fonte.addEventListener('change', () => {
     texto.style.fontFamily = fonte.value;
